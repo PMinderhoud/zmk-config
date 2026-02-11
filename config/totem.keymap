@@ -33,16 +33,40 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        c_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 0>;
+        c_caps {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
+            layers = <0>;
+        };
+
+        c_2zero {
+            bindings = <&m_2zero>;
+            key-positions = <19 18>;
+            layers = <2>;
+        };
+
+        c_3zero {
+            bindings = <&m_3zero>;
+            key-positions = <19 18 17>;
+            layers = <2>;
+        };
+
+        c_lambda {
+            bindings = <&m_lambda>;
+            key-positions = <13 12>;
+            layers = <2>;
+        };
+
+        c_lambdablk {
+            bindings = <&m_lambdablk>;
+            key-positions = <13 12 11>;
+            layers = <2>;
         };
     };
 
@@ -73,6 +97,70 @@
                 <&kp U>;
 
             label = "M_QU";
+        };
+
+        m_cmp: m_cmp {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp RALT &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "M_CMP";
+        };
+
+        m_cmpu: m_cmpu {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&kp RALT &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>;
+
+            label = "M_CMPU";
+        };
+
+        m_lambda: m_lambda {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
+            label = "M_LAMBDA";
+        };
+
+        m_lambdablk: m_lambdablk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&m_lambda &kp LBRC &kp ENTER>;
+            label = "M_LAMBDABLK";
+        };
+
+        m_ctrlk: m_ctrlk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(K) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "M_CTRLK";
+        };
+
+        m_3zero: m_3zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0 &kp N0>;
+            label = "M_3ZERO";
+        };
+
+        m_u3zero: m_u3zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDERSCORE &kp N0 &kp N0 &kp N0>;
+            label = "M_U3ZERO";
+        };
+
+        m_2zero: m_2zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0>;
+            label = "M_2ZERO";
         };
     };
 
@@ -119,6 +207,25 @@
             mods = <(MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        easynew: easynew {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EASYNEW";
+            bindings = <&kp LC(N)>, <&kp N>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT)>;
+        };
+
+        zero3mod: zero3mod {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZERO3MOD";
+            bindings = <&m_3zero>, <&m_u3zero>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     keymap {
@@ -146,7 +253,7 @@
        &kp W        &kp Y        &kp O         &kp U         &kp EQUAL    &qu       &kp L         &kp D         &kp P        &kp V
        &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS    &kp K     &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
 &kp B  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp FSLH     &kp SEMI  &kp M         &kp G         &kp F        &kp Z        &kp X
-                                 &kp RET       &lt 1 TAB     &kp TAB      &kp BSPC  &lt 2 ESC     &kp DEL
+                                 &kp RET       &lt 1 SPACE   &kp TAB      &kp BSPC  &lt 2 R       &kp DEL
             >;
         };
 
@@ -171,14 +278,14 @@
             bindings = <
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
-&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(LGUI)       &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &trans
-                                         &trans          &trans             &trans             &mo 3        &kp KP_N0     &trans
+&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(LGUI)       &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
+                                         &trans          &trans             &trans             &mo 3        &trans        &trans
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        sim_layer {
+        sym_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "SYM";
@@ -195,10 +302,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo 3        &trans        &kp C_PP        &trans
+           &kp LS(PRCNT)   &kp LS(PLUS)  &kp MINUS      &kp LS(DLLR)      &kp LS(LBRC)    &kp LS(RBRC)  &kp N7  &kp N8  &kp N9  &kp LS(AT)
+           &hml LGUI EXCL  &hml LALT LT  &hml LCTRL GT  &hml LSHFT EQUAL  &kp LS(LPAR)    &kp LS(RPAR)  &kp N1  &kp N2  &kp N3  &kp N0
+&kp GRAVE  &kp CARET       &kp LS(STAR)  &kp FSLH       &kp LS(UNDER)     &kp LBKT        &kp RBKT      &kp N4  &kp N5  &kp N6  &kp DOT     &zero3mod
+                                         &kp AMPS       &trans            &kp PIPE        &trans        &trans  &trans
             >;
         };
 
