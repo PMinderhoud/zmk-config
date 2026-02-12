@@ -253,11 +253,9 @@
        &kp W        &kp Y        &kp O         &kp U         &kp EQUAL    &qu       &kp L         &kp D         &kp P        &kp V
        &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS    &kp K     &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
 &kp B  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp FSLH     &kp SEMI  &kp M         &kp G         &kp F        &kp Z        &kp X
-                                 &kp RET       &lt 1 SPACE   &kp TAB      &kp BSPC  &lt 2 R       &kp DEL
+                                 &kp RET       &lt 1 SPACE   &kp TAB      &kp BSPC  &lt 2 R       &lt 3 DEL
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -279,11 +277,9 @@
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
 &trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(LGUI)       &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
-                                         &trans          &trans             &trans             &mo 3        &trans        &trans
+                                         &trans          &trans             &trans             &mo 4        &trans        &trans
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sym_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -309,7 +305,14 @@
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        function_layer {
+            bindings = <
+        &trans    &trans    &kp CAPS   &caps_word  &trans    &kp INS        &kp F9  &kp F10  &kp F11  &kp F12
+        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &trans    &kp DEL        &kp F5  &kp F6   &kp F7   &kp F8
+&trans  &trans    &trans    &trans     &trans      &trans    &kp LC(LS(M))  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                            &trans     &trans      &trans    &trans         &trans  &trans
+            >;
+        };
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
