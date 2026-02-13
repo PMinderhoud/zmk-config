@@ -35,7 +35,7 @@
 
         c_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <33 32>;
             bindings = <&kp ESC>;
         };
 
@@ -67,6 +67,30 @@
             bindings = <&m_lambdablk>;
             key-positions = <13 12 11>;
             layers = <2>;
+        };
+
+        c_quotes {
+            bindings = <&kp DQT>;
+            key-positions = <28 29>;
+            layers = <0>;
+        };
+
+        c_exclaim {
+            bindings = <&kp EXCL>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        c_question {
+            bindings = <&kp QMARK>;
+            key-positions = <24 23>;
+            layers = <0>;
+        };
+
+        c_colon {
+            bindings = <&kp COLON>;
+            key-positions = <23 22>;
+            layers = <0>;
         };
     };
 
@@ -276,7 +300,7 @@
             bindings = <
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
-&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(LGUI)       &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
+&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
                                          &trans          &trans             &trans             &mo 4        &trans        &trans
             >;
         };
