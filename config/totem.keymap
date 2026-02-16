@@ -35,7 +35,7 @@
 
         c_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <33 32>;
             bindings = <&kp ESC>;
         };
 
@@ -67,6 +67,30 @@
             bindings = <&m_lambdablk>;
             key-positions = <13 12 11>;
             layers = <2>;
+        };
+
+        c_quotes {
+            bindings = <&kp DQT>;
+            key-positions = <28 29>;
+            layers = <0>;
+        };
+
+        c_exclaim {
+            bindings = <&kp EXCL>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        c_question {
+            bindings = <&kp QMARK>;
+            key-positions = <24 23>;
+            layers = <0>;
+        };
+
+        c_colon {
+            bindings = <&kp COLON>;
+            key-positions = <23 22>;
+            layers = <0>;
         };
     };
 
@@ -250,14 +274,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp W        &kp Y        &kp O         &kp U         &kp EQUAL    &qu       &kp L         &kp D         &kp P        &kp V
-       &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS    &kp K     &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
-&kp B  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp FSLH     &kp SEMI  &kp M         &kp G         &kp F        &kp Z        &kp X
-                                 &kp RET       &lt 1 SPACE   &kp TAB      &kp BSPC  &lt 2 R       &kp DEL
+       &kp W        &kp Y        &kp O         &kp U         &kp EQUAL    &qu              &kp L         &kp D         &kp P        &kp V
+       &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS    &kp K            &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
+&kp B  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp FSLH     &kp SEMI         &kp M         &kp G         &kp F        &kp Z        &kp X
+                                 &kp RET       &lt 1 SPACE   &kp TAB      &lt 4 BACKSPACE  &lt 2 R       &lt 3 DEL
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -278,12 +300,10 @@
             bindings = <
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
-&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(LGUI)       &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
-                                         &trans          &trans             &trans             &mo 3        &trans        &trans
+&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
+                                         &trans          &trans             &trans             &mo 5        &trans        &trans
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sym_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -309,7 +329,23 @@
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        function_layer {
+            bindings = <
+        &trans    &trans    &kp CAPS   &caps_word  &trans    &kp INS        &kp F9  &kp F10  &kp F11  &kp F12
+        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &trans    &kp DEL        &kp F5  &kp F6   &kp F7   &kp F8
+&trans  &trans    &trans    &trans     &trans      &trans    &kp LC(LS(M))  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+                            &trans     &trans      &trans    &trans         &trans  &trans
+            >;
+        };
+
+        coding_layer {
+            bindings = <
+        &kp LS(LA(F))  &kp LS(F8)  &kp F9       &kp F5         &kp LS(F5)      &none      &kp LC(P)      &kp F12      &kp LA(F12)        &none
+        &kp LS(LC(F))  &kp F8      &kp F11      &kp F10        &kp LS(F11)     &kp LC(T)  &kp LS(LC(P))  &kp LC(F12)  &kp LS(LC(SPACE))  &none
+&tog 4  &m_ctrlk Z     &none       &none        &none          &none           &none      &kp LC(G)      &kp LS(F12)  &none              &none  &none
+                                   &kp LC(DOT)  &kp LC(SPACE)  &kp LA(FSLH)    &none      &none          &none
+            >;
+        };
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
