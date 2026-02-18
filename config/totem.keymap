@@ -186,6 +186,13 @@
             bindings = <&kp N0 &kp N0>;
             label = "M_2ZERO";
         };
+
+        m_smile: m_smile {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp COLON &kp MINUS &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "M_SMILE";
+        };
     };
 
     behaviors {
@@ -277,7 +284,7 @@
        &kp W        &kp Y        &kp O         &kp U         &kp EQUAL    &qu              &kp L         &kp D         &kp P        &kp V
        &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS    &kp K            &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
 &kp B  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp FSLH     &kp SEMI         &kp M         &kp G         &kp F        &kp Z        &kp X
-                                 &kp RET       &lt 1 SPACE   &kp TAB      &lt 4 BACKSPACE  &lt 2 R       &lt 3 DEL
+                                 &kp RET       &lt 1 SPACE   &lt 5 TAB    &lt 4 BACKSPACE  &lt 2 R       &lt 3 DEL
             >;
         };
 
@@ -301,7 +308,7 @@
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
 &trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
-                                         &trans          &trans             &trans             &mo 5        &trans        &trans
+                                         &trans          &trans             &trans             &mo 6        &trans        &trans
             >;
         };
 
@@ -344,6 +351,15 @@
         &kp LS(LC(F))  &kp F8      &kp F11      &kp F10        &kp LS(F11)     &kp LC(T)  &kp LS(LC(P))  &kp LC(F12)  &kp LS(LC(SPACE))  &none
 &tog 4  &m_ctrlk Z     &none       &none        &none          &none           &none      &kp LC(G)      &kp LS(F12)  &none              &none  &none
                                    &kp LC(DOT)  &kp LC(SPACE)  &kp LA(FSLH)    &none      &none          &none
+            >;
+        };
+
+        dia_layer {
+            bindings = <
+        &m_smile LPAR  &m_smile PIPE  &m_smile RPAR  &m_cmp EQUAL E  &trans    &m_cmp GRAVE U  &trans  &m_cmp GRAVE E  &trans  &trans
+        &m_cmp S S     &trans         &trans         &trans          &trans    &m_cmp DQT U    &trans  &m_cmp DQT E    &trans  &trans
+&trans  &trans         &trans         &trans         &trans          &trans    &m_cmp SQT U    &trans  &m_cmp APOS E   &trans  &trans  &trans
+                                      &trans         &trans          &trans    &trans          &trans  &trans
             >;
         };
 
