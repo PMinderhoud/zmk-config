@@ -52,7 +52,7 @@
         };
 
         c_3zero {
-            bindings = <&m_3zero>;
+            bindings = <&zero3mod>;
             key-positions = <19 18 17>;
             layers = <2>;
         };
@@ -331,7 +331,7 @@
             bindings = <
            &kp LS(PRCNT)   &kp LS(PLUS)  &kp MINUS      &kp LS(DLLR)      &kp LS(LBRC)    &kp LS(RBRC)  &kp N7  &kp N8  &kp N9  &kp LS(AT)
            &hml LGUI EXCL  &hml LALT LT  &hml LCTRL GT  &hml LSHFT EQUAL  &kp LS(LPAR)    &kp LS(RPAR)  &kp N1  &kp N2  &kp N3  &kp N0
-&kp GRAVE  &kp CARET       &kp LS(STAR)  &kp FSLH       &kp LS(UNDER)     &kp LBKT        &kp RBKT      &kp N4  &kp N5  &kp N6  &kp DOT     &zero3mod
+&kp GRAVE  &kp CARET       &kp LS(STAR)  &kp FSLH       &kp LS(UNDER)     &kp LBKT        &kp RBKT      &kp N4  &kp N5  &kp N6  &kp DOT     &kp COMMA
                                          &kp AMPS       &trans            &kp PIPE        &trans        &trans  &trans
             >;
         };
