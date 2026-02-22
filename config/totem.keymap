@@ -308,7 +308,7 @@
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
 &trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
-                                         &trans          &trans             &trans             &mo 6        &trans        &trans
+                                         &trans          &trans             &trans             &mo 7        &trans        &trans
             >;
         };
 
@@ -356,10 +356,19 @@
 
         dia_layer {
             bindings = <
-        &m_smile LPAR  &m_smile PIPE  &m_smile RPAR  &m_cmp EQUAL E  &trans    &m_cmp GRAVE U  &trans  &m_cmp GRAVE E  &trans  &trans
-        &m_cmp S S     &trans         &trans         &trans          &trans    &m_cmp DQT U    &trans  &m_cmp DQT E    &trans  &trans
-&trans  &trans         &trans         &trans         &trans          &trans    &m_cmp SQT U    &trans  &m_cmp APOS E   &trans  &trans  &trans
-                                      &trans         &trans          &trans    &trans          &trans  &trans
+        &m_smile LPAR  &m_smile PIPE  &m_smile RPAR  &m_cmp EQUAL E  &trans    &m_cmp GRAVE U  &m_cmp GRAVE O  &m_cmp GRAVE E  &m_cmp GRAVE A  &m_cmp GRAVE I
+        &m_cmp S S     &trans         &trans         &mo 6           &trans    &m_cmp DQT U    &m_cmp DQT O    &m_cmp DQT E    &m_cmp DQT A    &m_cmp DQT I
+&trans  &trans         &trans         &trans         &trans          &trans    &m_cmp SQT U    &m_cmp SQT O    &m_cmp APOS E   &m_cmp SQT A    &m_cmp SQT I    &trans
+                                      &trans         &trans          &trans    &trans          &trans          &trans
+            >;
+        };
+
+        diaup_layer {
+            bindings = <
+        &m_smile LPAR  &m_smile PIPE  &m_smile RPAR  &m_cmp EQUAL E  &trans    &m_cmpu GRAVE U  &m_cmpu GRAVE O  &m_cmpu GRAVE E  &m_cmpu GRAVE A  &m_cmpu GRAVE I
+        &m_cmp S S     &trans         &trans         &trans          &trans    &m_cmpu DQT U    &m_cmpu DQT O    &m_cmpu DQT E    &m_cmpu DQT A    &m_cmpu DQT I
+&trans  &trans         &trans         &trans         &trans          &trans    &m_cmpu SQT U    &m_cmpu SQT O    &m_cmpu APOS E   &m_cmpu SQT A    &m_cmpu SQT I    &trans
+                                      &trans         &trans          &trans    &trans           &trans           &trans
             >;
         };
 
