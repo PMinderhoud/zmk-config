@@ -146,6 +146,8 @@
                 <&kp U>;
 
             label = "M_QU";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_cmp: m_cmp {
@@ -153,6 +155,8 @@
             #binding-cells = <2>;
             bindings = <&kp RALT &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
             label = "M_CMP";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_cmpu: m_cmpu {
@@ -168,6 +172,8 @@
                 <&kp LSHFT>;
 
             label = "M_CMPU";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_lambda: m_lambda {
@@ -175,6 +181,8 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
             label = "M_LAMBDA";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_lambdablk: m_lambdablk {
@@ -182,6 +190,8 @@
             #binding-cells = <0>;
             bindings = <&m_lambda &kp LBRC &kp ENTER>;
             label = "M_LAMBDABLK";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_ctrlk: m_ctrlk {
@@ -196,6 +206,8 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp N0>;
             label = "M_3ZERO";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_u3zero: m_u3zero {
@@ -203,6 +215,8 @@
             #binding-cells = <0>;
             bindings = <&kp UNDERSCORE &kp N0 &kp N0 &kp N0>;
             label = "M_U3ZERO";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_2zero: m_2zero {
@@ -210,6 +224,8 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0>;
             label = "M_2ZERO";
+            tap-ms = <1>;
+            wait-ms = <1>;
         };
 
         m_smile: m_smile {
@@ -217,6 +233,8 @@
             #binding-cells = <1>;
             bindings = <&kp COLON &kp MINUS &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "M_SMILE";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_jo: m_jo {
@@ -230,6 +248,8 @@
                 <&kp O>;
 
             label = "M_JO";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_jou: m_jou {
@@ -243,6 +263,8 @@
                 <&kp O &kp U>;
 
             label = "M_JOU";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_wij: m_wij {
@@ -256,6 +278,8 @@
                 <&kp I &kp J>;
 
             label = "M_WIJ";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         m_ja: m_ja {
@@ -269,6 +293,8 @@
                 <&kp A>;
 
             label = "M_JA";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
     };
 
