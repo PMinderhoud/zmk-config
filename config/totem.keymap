@@ -92,6 +92,31 @@
             key-positions = <23 22>;
             layers = <0>;
         };
+
+        c_wij {
+            bindings = <&m_wij>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        c_jo {
+            bindings = <&m_jo>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        c_jou {
+            bindings = <&m_jou>;
+            key-positions = <1 2 3>;
+            layers = <0>;
+            timeout-ms = <0>;
+        };
+
+        c_ja {
+            bindings = <&m_ja>;
+            key-positions = <23 12>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -192,6 +217,58 @@
             #binding-cells = <1>;
             bindings = <&kp COLON &kp MINUS &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "M_SMILE";
+        };
+
+        m_jo: m_jo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp J>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp U>;
+
+            label = "M_JO";
+        };
+
+        m_jou: m_jou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp J>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp U &kp O>;
+
+            label = "M_JOU";
+        };
+
+        m_wij: m_wij {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp W>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp I &kp J>;
+
+            label = "M_WIJ";
+        };
+
+        m_ja: m_ja {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp J>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp A>;
+
+            label = "M_JA";
         };
     };
 
@@ -340,7 +417,7 @@
             bindings = <
         &trans    &trans    &kp CAPS   &caps_word  &trans    &kp INS        &kp F9  &kp F10  &kp F11  &kp F12
         &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &trans    &kp DEL        &kp F5  &kp F6   &kp F7   &kp F8
-&trans  &trans    &trans    &trans     &trans      &trans    &kp LC(LS(M))  &kp F1  &kp F2   &kp F3   &kp F4   &trans
+&trans  &trans    &trans    &trans     &trans      &trans    &kp LC(LS(M))  &kp F1  &kp F2   &kp F3   &kp F4   &mo 7
                             &trans     &trans      &trans    &trans         &trans  &trans
             >;
         };
@@ -389,10 +466,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-                &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&studio_unlock  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                         &trans        &trans  &trans    &trans  &trans  &trans
+                &sys_reset   &bt BT_CLR  &out OUT_TOG  &bt BT_SEL 0  &trans        &trans  &kp F7  &kp F8  &kp F9  &kp F12
+                &bootloader  &bt BT_PRV  &bt BT_SEL 3  &bt BT_SEL 1  &bt BT_NXT    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&studio_unlock  &trans       &bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 2  &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                         &trans        &trans        &trans        &trans  &trans  &trans
             >;
         };
 
