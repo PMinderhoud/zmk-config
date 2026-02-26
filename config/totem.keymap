@@ -227,7 +227,7 @@
                 <&macro_release>,
                 <&kp LSHFT &kp RSHFT>,
                 <&macro_tap>,
-                <&kp U>;
+                <&kp O>;
 
             label = "M_JO";
         };
@@ -240,7 +240,7 @@
                 <&macro_release>,
                 <&kp LSHFT &kp RSHFT>,
                 <&macro_tap>,
-                <&kp U &kp O>;
+                <&kp O &kp U>;
 
             label = "M_JOU";
         };
