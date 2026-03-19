@@ -117,6 +117,18 @@
             key-positions = <23 12>;
             layers = <0>;
         };
+
+        c_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <21 22>;
+            layers = <0 2>;
+        };
+
+        c_bsl {
+            bindings = <&kp BSLH>;
+            key-positions = <20 10>;
+            layers = <0 2>;
+        };
     };
 
     macros {
@@ -410,7 +422,7 @@
             bindings = <
         &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)    &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
         &kp LGUI          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN    &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
-&trans  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
+&tog 1  &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)  &kp HOME      &kp PG_DN    &kp PG_UP   &kp END        &easynew
                                          &trans          &trans             &trans             &mo 7        &trans        &trans
             >;
         };
@@ -432,10 +444,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp LS(PRCNT)   &kp LS(PLUS)  &kp MINUS      &kp LS(DLLR)      &kp LS(LBRC)    &kp LS(RBRC)  &kp N7  &kp N8  &kp N9  &kp LS(AT)
-           &hml LGUI EXCL  &hml LALT LT  &hml LCTRL GT  &hml LSHFT EQUAL  &kp LS(LPAR)    &kp LS(RPAR)  &kp N1  &kp N2  &kp N3  &kp N0
-&kp GRAVE  &kp CARET       &kp LS(STAR)  &kp FSLH       &kp LS(UNDER)     &kp LBKT        &kp RBKT      &kp N4  &kp N5  &kp N6  &kp DOT     &kp COMMA
-                                         &kp AMPS       &trans            &kp PIPE        &trans        &trans  &trans
+        &kp LS(PRCNT)   &kp LS(PLUS)  &kp MINUS      &kp LS(DLLR)      &kp LS(LBRC)    &kp LS(RBRC)  &kp N7  &kp N8  &kp N9  &kp LS(AT)
+        &hml LGUI EXCL  &hml LALT LT  &hml LCTRL GT  &hml LSHFT EQUAL  &kp LS(LPAR)    &kp LS(RPAR)  &kp N1  &kp N2  &kp N3  &kp N0
+&tog 2  &kp CARET       &kp LS(STAR)  &kp FSLH       &kp LS(UNDER)     &kp LBKT        &kp RBKT      &kp N4  &kp N5  &kp N6  &kp DOT     &kp COMMA
+                                      &kp AMPS       &trans            &kp PIPE        &trans        &trans  &trans
             >;
         };
 
@@ -443,7 +455,7 @@
             bindings = <
         &trans    &trans    &kp CAPS   &caps_word  &trans    &kp INS        &kp F9  &kp F10  &kp F11  &kp F12
         &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT   &trans    &kp DEL        &kp F5  &kp F6   &kp F7   &kp F8
-&trans  &trans    &trans    &trans     &trans      &trans    &kp LC(LS(M))  &kp F1  &kp F2   &kp F3   &kp F4   &mo 7
+&tog 3  &trans    &trans    &trans     &trans      &trans    &kp LC(LS(M))  &kp F1  &kp F2   &kp F3   &kp F4   &mo 7
                             &trans     &trans      &trans    &trans         &trans  &trans
             >;
         };
@@ -461,7 +473,7 @@
             bindings = <
         &m_smile LPAR  &m_smile PIPE  &m_smile RPAR  &m_cmp EQUAL E  &trans    &m_cmp GRAVE U  &m_cmp GRAVE O  &m_cmp GRAVE E  &m_cmp GRAVE A  &m_cmp GRAVE I
         &m_cmp S S     &trans         &trans         &mo 6           &trans    &m_cmp DQT U    &m_cmp DQT O    &m_cmp DQT E    &m_cmp DQT A    &m_cmp DQT I
-&trans  &trans         &trans         &trans         &trans          &trans    &m_cmp SQT U    &m_cmp SQT O    &m_cmp APOS E   &m_cmp SQT A    &m_cmp SQT I    &trans
+&tog 5  &trans         &trans         &trans         &trans          &trans    &m_cmp SQT U    &m_cmp SQT O    &m_cmp APOS E   &m_cmp SQT A    &m_cmp SQT I    &trans
                                       &trans         &trans          &trans    &trans          &trans          &trans
             >;
         };
