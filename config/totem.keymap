@@ -308,6 +308,15 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        m_mdcode: m_mdcode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            label = "M_MDCODE";
+            tap-ms = <10>;
+            wait-ms = <10>;
+        };
     };
 
     behaviors {
@@ -399,7 +408,7 @@
            &kp W        &kp Y        &kp O         &kp U         &kp EQUAL        &kp Z            &kp L         &kp D         &kp P        &kp V
            &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS        &kp K            &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
 &kp SLASH  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp SEMICOLON    &qu              &kp M         &kp G         &kp B        &kp F        &kp X
-                                     &kp RET       &lt 1 SPACE   &lt 5 TAB        &lt 4 BACKSPACE  &lt 2 R       &lt 3 DEL
+                                     &lt 8 ENTER   &lt 1 SPACE   &lt 5 TAB        &lt 4 BACKSPACE  &lt 2 R       &lt 3 DEL
             >;
         };
 
@@ -508,6 +517,15 @@
                 &bootloader  &bt BT_PRV  &bt BT_SEL 3  &bt BT_SEL 1  &bt BT_NXT    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &studio_unlock  &trans       &bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 2  &trans        &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                          &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+        };
+
+        extend {
+            bindings = <
+           &kp ESC    &trans  &trans  &trans     &kp LS(PLUS)     &trans  &trans        &trans        &trans    &trans
+           &m_mdcode  &trans  &trans  &kp LSHFT  &kp LS(UNDER)    &trans  &kp LS(LBRC)  &kp LS(LPAR)  &kp LBKT  &kp LS(LT)
+&kp COMMA  &kp GRAVE  &trans  &trans  &trans     &kp LS(COLON)    &kp Q   &kp LS(RBRC)  &kp LS(RPAR)  &kp RBKT  &kp LS(GT)  &kp RET
+                              &trans  &trans     &trans           &trans  &trans        &trans
             >;
         };
 
