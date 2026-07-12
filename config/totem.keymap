@@ -405,9 +405,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp W        &kp Y        &kp O         &kp U         &kp EQUAL        &kp Z            &kp L         &kp D         &kp P        &kp V
+           &kp F        &kp Y        &kp O         &kp U         &kp EQUAL        &kp Z            &kp L         &kp D         &kp P        &kp V
            &hml LGUI C  &hml LALT I  &hml LCTRL A  &hml LSHFT E  &kp MINUS        &kp K            &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N  &hmr RGUI S
-&kp SLASH  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp SEMICOLON    &qu              &kp M         &kp G         &kp B        &kp F        &kp X
+&kp SLASH  &kp SQT      &kp COMMA    &kp J         &kp DOT       &kp SEMICOLON    &qu              &kp M         &kp G         &kp B        &kp W        &kp X
                                      &lt 8 ENTER   &lt 1 SPACE   &lt 5 TAB        &lt 4 BACKSPACE  &lt 2 R       &lt 3 DEL
             >;
         };
