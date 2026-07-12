@@ -93,8 +93,8 @@
             layers = <0>;
         };
 
-        c_wij {
-            bindings = <&m_wij>;
+        c_fij {
+            bindings = <&m_fij>;
             key-positions = <0 1>;
             layers = <0>;
         };
@@ -279,17 +279,17 @@
             tap-ms = <1>;
         };
 
-        m_wij: m_wij {
+        m_fij: m_fij {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp W>,
+                <&kp F>,
                 <&macro_release>,
                 <&kp LSHFT &kp RSHFT>,
                 <&macro_tap>,
                 <&kp I &kp J>;
 
-            label = "M_WIJ";
+            label = "M_FIJ";
             wait-ms = <1>;
             tap-ms = <1>;
         };
